@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { MyContext } from "../../contexts/MyContext";
 
 export default function Header() {
-  const { refIntroduce, refAbout, refSkill, refProject, refContact } =
+  const { refIntroduce, refAbout, refSkill, refPortfolio, refProject, refContact } =
     useContext(MyContext);
   const handleScroll = (refScroll: any) => {
     if (refScroll) refScroll.current.scrollIntoView({ behavior: "smooth" });
@@ -40,6 +40,14 @@ export default function Header() {
                   onClick={() => handleScroll(refSkill)}
                 >
                   Skills
+                </button>
+              </li>
+              <li className="p-[16px]">
+                <button
+                  className="hover:text-cyan-500 duration-300"
+                  onClick={() => handleScroll(refPortfolio)}
+                >
+                  Portfolio
                 </button>
               </li>
               <li className="p-[16px]">
